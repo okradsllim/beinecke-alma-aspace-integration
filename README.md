@@ -1,4 +1,4 @@
-```markdown
+```
 # ArchivesSpace Alma Integration Plugin
 
 ## Current Functionality
