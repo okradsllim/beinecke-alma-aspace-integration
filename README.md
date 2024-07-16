@@ -1,7 +1,3 @@
-Certainly! I'd be happy to help you create documentation for your GitHub repo that showcases both the current functionality of your Alma integration plugin and your ideas for improvement. This will be a great way to demonstrate your work and potential to future employers. I'll create a markdown document that you can use as a README.md file in your repo.
-
-Here's a draft of the documentation:
-
 ```markdown
 # ArchivesSpace Alma Integration Plugin
 
@@ -137,57 +133,11 @@ To enhance the plugin's functionality and flexibility, I propose the following i
    end
    ```
 
-4. **Batch Processing**
-   - Implement asynchronous job processing for handling multiple resources:
-
-   ```ruby
-   class AlmaSyncJob < ApplicationJob
-     def perform(resource_ids)
-       resource_ids.each do |id|
-         resource = Resource.find(id)
-         sync_resource(resource)
-       end
-     end
-
-     private
-
-     def sync_resource(resource)
-       # Sync logic
-     end
-   end
-   ```
-
-5. **Customizable Field Mappings**
-   - Allow institutions to define their own field mappings:
-
-   ```ruby
-   # config/alma_field_mappings.yml
-   bib_record:
-     title: 
-       - tag: '245'
-         subfields: ['a', 'b']
-   holdings_record:
-     location:
-       - tag: '852'
-         subfields: ['b', 'c']
-   ```
-
-6. **Two-way Synchronization**
+4. **Two-way Synchronization**
    - Implement functionality to pull changes from Alma back to ArchivesSpace.
 
-7. **Improved Error Handling and Logging**
+5. **Improved Error Handling and Logging**
    - Implement robust error handling and detailed logging for better troubleshooting.
 
-These improvements would make the plugin more flexible, powerful, and easier to maintain, while also demonstrating advanced software design principles and Ruby programming skills.
+These enhancements are untested, but could make the plugin more flexible, powerful, and easier to maintain.
 ```
-
-This documentation provides an overview of the current functionality, shows key code snippets, and outlines your ideas for improvement. It demonstrates your understanding of the current system and your ability to design more advanced features.
-
-You can further enhance this documentation by:
-
-1. Adding installation instructions
-2. Providing usage examples with screenshots
-3. Including a section on testing and how to contribute to the project
-4. Adding a license section
-
-Remember to keep your documentation up-to-date as you implement new features or make changes to the existing codebase. This will make your GitHub repo more attractive to potential employers and collaborators.
