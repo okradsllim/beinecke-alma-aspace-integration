@@ -1,4 +1,3 @@
-```
 # ArchivesSpace Alma Integration Plugin
 
 ## Current Functionality
@@ -16,34 +15,30 @@ This plugin provides integration between ArchivesSpace and Alma, focusing on MAR
 
 The plugin requires specific configuration in ArchivesSpace's `config.rb` file:
 
-```ruby
-AppConfig[:alma_api_url] = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/bibs'
-AppConfig[:alma_apikey] = 'your_api_key_here'
-AppConfig[:alma_holdings] = [
-  ['building_code1', 'location_code1'],
-  ['building_code2', 'location_code2']
-]
-```
+    AppConfig[:alma_api_url] = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/bibs'
+    AppConfig[:alma_apikey] = 'your_api_key_here'
+    AppConfig[:alma_holdings] = [
+      ['building_code1', 'location_code1'],
+      ['building_code2', 'location_code2']
+    ]
 
 ### Core Components
 
 1. **Controller (alma_integrations_controller.rb)**
-
+   
    Handles user interactions and API calls:
 
-   ```ruby
-   def search
-     @results = do_search(params)
-   end
+       def search
+         @results = do_search(params)
+       end
 
-   def add_bibs
-     post_bibs(params)
-   end
+       def add_bibs
+         post_bibs(params)
+       end
 
-   def add_holdings
-     post_holdings(params)
-   end
-   ```
+       def add_holdings
+         post_holdings(params)
+       end
 
 2. **Alma Integrator (alma_integrator.rb)**
 
